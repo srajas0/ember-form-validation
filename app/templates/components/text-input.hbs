@@ -1,0 +1,16 @@
+<div class="input-row {{if errorMessage 'is-error'}}">
+  <label class="lbl">{{label}}: </label>
+  <div class="fields">
+    {{input 
+      type=type 
+      value=value 
+      placeholder=placeholder
+      focusOut=(action "focusedOut")
+    }}
+  </div>
+  {{#if errorMessage}}
+    <div class="field-error">
+      {{errorMessage}}
+    </div>
+  {{/if}}
+</div>
